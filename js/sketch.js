@@ -69,7 +69,7 @@ function draw() {
   y1 = tendrilCoords[1];
   framesSincePulse += 1;
   // if save is true, save frames
-  if (save && frameCount - 1 < nFrames) saveCanvas(
-    `frame_${('000' + frameCount).slice(-3)}`
-  );
+  if (saveFrames && frameCount - 1 < nFrames) {
+    saveCanvas(`frame_${('000' + frameCount).slice(-3)}`);
+  }
 }
