@@ -46,6 +46,7 @@ function setup() {
   frameRate(fps);
   background.apply(null, bgColor);
   nodes.push([width / 2, height / 2]);
+  // Set starting angle of first tendril
   theta = random(0, 2 * PI);
   console.log('End of setup()')
 }
@@ -60,10 +61,12 @@ function draw() {
       circle(node[0], node[1], nodeSize)
       x1 = node[0];
       y1 = node[1];
+      // Set starting angle of tendril
       theta = random(0, 2 * PI);
     }
     framesSincePulse = 0;
   }
+  // Draw segment of tendril
   tendrilCoords = drawLine(x1, y1, theta)
   x1 = tendrilCoords[0];
   y1 = tendrilCoords[1];
