@@ -8,44 +8,12 @@ let fungusColor = [90, 75, 100];
 let nodeSize = 20;
 let tendrilWidth = 10;
 let nodes = [];
-let tendrils = [];
+let tendrilTips = [];
 let tendrilCoords, x1, y1, theta;
 let tendrilReach = 20;
 // let saveFrames = true;
 let saveFrames = false;
 let nFrames = 50;
-
-class Tendril {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.theta = random(0, 2 * PI);
-  }
-}
-
-class Node {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
-  
-}
-
-function keyPressed() {
-  // Set spacebar to toggle play/pause of drawing loop
-  if (key === ' ') {
-    if (isLooping()) {
-      noLoop();
-      console.log('STOPPED. Press SPACE to resume.')
-    } else {
-      loop();
-      console.log('RESUMED. Press SPACE to stop.')
-    }
-  }
-  if (key === 'r') {
-    reset();
-  }
-}
 
 function drawLine(x1, y1, theta) {
   let dTheta = theta + random(-PI / 6, PI / 6);
