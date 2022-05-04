@@ -8,11 +8,28 @@ let fungusColor = [90, 75, 100];
 let nodeSize = 20;
 let tendrilWidth = 10;
 let nodes = [];
+let tendrils = [];
 let tendrilCoords, x1, y1, theta;
 let tendrilReach = 20;
 // let saveFrames = true;
 let saveFrames = false;
 let nFrames = 50;
+
+class Tendril {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.theta = random(0, 2 * PI);
+  }
+}
+
+class Node {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  
+}
 
 function keyPressed() {
   // Set spacebar to toggle play/pause of drawing loop
@@ -63,6 +80,7 @@ function draw() {
       y1 = node[1];
       // Set starting angle of tendril
       theta = random(0, 2 * PI);
+      tendrils.push(new Tendril(node.x, node.y))
     }
     framesSincePulse = 0;
   }
