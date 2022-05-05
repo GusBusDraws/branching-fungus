@@ -7,14 +7,14 @@ let bgColor = [0, 0, 50];
 let fungusColor = [90, 75, 100];
 let nodeSize = 20;
 let tendrilWidth = 10;
-let nNodes = 2;
+let nNodes = 3;
 let nodes = [];
 // Node.newTendril adds tendril position to tendrilTips
 let tendrilTips = [];
 let tendrilReach = 20;
 // let saveFrames = true;
 let saveFrames = false;
-let nFrames = 50;
+let nFrames = 100;
 
 class Node {
   constructor(x, y) {
